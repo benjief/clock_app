@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.clock_app"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.clock_app"
@@ -50,10 +50,17 @@ android {
 }
 
 dependencies {
-
-    implementation("androidx.core:core-ktx:1.9.0")
+    // Time Picker Core
+    implementation("com.maxkeppeler.sheets-compose-dialogs:core:1.0.2")
+    // Time Picker Clock
+    implementation("com.maxkeppeler.sheets-compose-dialogs:clock:1.0.2")
+    // Time-Specific Stuff
+    implementation("androidx.compose.runtime:runtime:1.5.4")
+    implementation("androidx.compose.runtime:runtime-livedata:1.5.4")
+    // Defaults
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
-    implementation("androidx.activity:activity-compose:1.8.1")
+    implementation("androidx.activity:activity-compose:1.8.2")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
